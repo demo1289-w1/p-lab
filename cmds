@@ -1,0 +1,47 @@
+# aliase to reduce typing
+alias "d=docker" "k=kubectl"
+alias "k=kubectl"
+alias "d=docker"
+
+d run --name
+
+d inspect 
+
+# Find out port open for a container
+d ps --filter "name=clickhouse*"
+
+# Find out private ip of container
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-clickhouse-server
+
+# UK Property Market dataset
+https://clickhouse.com/docs/en/getting-started/example-datasets/uk-price-paid
+
+
+# Interactive shell 
+d exec -it my-clickhouse-server sh
+
+# Interactive start of clickhouse-server
+d run --rm -it --name my-clickhouse-server -p 9000:9000 clickhouse/clickhouse-server
+
+# Stop grafana container
+d stop my-grafana
+
+# Count of UK property data set
+SELECT count()
+FROM uk_price_paid
+
+---
+…or create a new repository on the command line
+echo "# User-Labs" >> README.mdo
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/demo1289-w1/User-Labs.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/demo1289-w1/User-Labs.git
+git branch -M main
+git push -u origin main
+
