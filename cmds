@@ -13,6 +13,18 @@ d ps --filter "name=clickhouse*"
 # Find out private ip of container
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-clickhouse-server
 
+# Create deployment
+k create -f <file.yml> --save-config 
+
+
+# Apply deployment
+k apply -f <file.yml> 
+
+# Create deployment and saving config
+k create -f <f.yml> --save-config
+
+
+
 # UK Property Market dataset
 https://clickhouse.com/docs/en/getting-started/example-datasets/uk-price-paid
 
