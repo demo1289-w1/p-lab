@@ -61,3 +61,38 @@ git push -u origin main
 Application Overview
 
 
+# Troubleshooting
+# View logs of a pod
+k logs <podname>
+
+# View logs of a specific container in a pod
+k logs <podname> -c <container name>
+
+# View logs of a previoulsy running pod
+k logs -p <podname>
+
+# Stream logs of a pod
+k logs -f <podname>
+
+# Information or events in a pod
+k describe pod <podname>
+
+k describe pod
+
+# Change a pod's output format
+k get pod <podname> -o yaml
+
+# Change a deployment's output format
+k get deployment <deployment name> -o yaml
+
+
+# Shell into a pod container
+k exec <podname> -it sh
+
+
+
+
+
+
+
+
